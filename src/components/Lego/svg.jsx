@@ -16,6 +16,8 @@ import typescript from '../../assets/svg/typescript.svg';
 import html5 from '../../assets/svg/html5.svg';
 import javascript from '../../assets/svg/javascript.svg';
 import css from '../../assets/svg/css.svg';
+import facebook from '../../assets/svg/fb.svg';
+import instagram from '../../assets/svg/ig.svg';
 
 export default {
     mariadb,
@@ -36,5 +38,7 @@ export default {
     html5,
     javascript,
     css,
+    facebook,
+    instagram,
 
 }

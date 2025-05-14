@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="flex flex-col h-full justify-center items-center gap-10">
           {/* Logo */}
     <div className="w-full flex justify-center items-center">
-      <h1 className="text-2xl font-bold tracking-wide text-white">mrHeadless</h1>
+      <h1 className="text-2xl font-bold tracking-wide text-red-600">[CHATCHAWAN]</h1>
     </div>
     <div className="w-full border-2 border-white/80 my-2"></div>
 

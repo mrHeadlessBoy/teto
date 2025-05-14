@@ -3,13 +3,16 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../Lego/Navbar';
 
 const Home = () => {
-  const [dateTime, setDateTime] = useState('');
+  const [fullDateTime, setFullDateTime] = useState('');
+  const [timeOnly, setTimeOnly] = useState('');
   const { pathname } = useLocation();
 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const options = {
+
+      // Full format for desktop
+      const fullOptions = {
         timeZone: 'Asia/Bangkok',
         hour: '2-digit',
         minute: '2-digit',
@@ -18,8 +21,18 @@ const Home = () => {
         month: 'short',
         year: 'numeric',
       };
-      const formatter = new Intl.DateTimeFormat('en-TH', options);
-      setDateTime(formatter.format(now));
+      const fullFormatter = new Intl.DateTimeFormat('en-TH', fullOptions);
+      setFullDateTime(fullFormatter.format(now));
+
+      // Time-only format for mobile
+      const timeOptions = {
+        timeZone: 'Asia/Bangkok',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      };
+      const timeFormatter = new Intl.DateTimeFormat('en-TH', timeOptions);
+      setTimeOnly(timeFormatter.format(now));
     };
 
     updateTime();
@@ -34,11 +47,19 @@ const Home = () => {
         <div className="flex-1 flex items-center justify-center overflow-auto p-2 md:p-0">
           <Outlet />
         </div>
-        <div className="absolute bottom-4 right-4 text-xs md:text-sm text-white bg-black/40 px-2 py-1 md:px-3 md:py-2 rounded-lg text-right leading-snug">
-          🔴 REC {dateTime}<br />
+
+        {/* Mobile: REC + time only */}
+        <div className="absolute bottom-4 right-4 text-xs text-white bg-black/40 px-2 py-1 rounded-lg text-right leading-snug md:hidden">
+          🔴 REC {timeOnly}
+        </div>
+
+        {/* Desktop: REC + full date and monitor path */}
+        <div className="absolute bottom-4 right-4 text-xs md:text-sm text-white bg-black/40 px-3 py-2 rounded-lg text-right leading-snug hidden md:block">
+          🔴 REC {fullDateTime}<br />
           <div>[monitor-{pathname}]</div>
         </div>
       </div>
+
       <div className="absolute inset-0 pointer-events-none z-30 scanlines"></div>
     </section>
   );
