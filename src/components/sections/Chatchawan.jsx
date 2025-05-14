@@ -30,13 +30,14 @@ const languages = [
 
 const Chatchawan = () => {
   return (
-    <section className="flex flex-col gap-6 px-8 text-left">
-      <div className="flex items-center gap-6">
-        <img
-          src={profilePic}
-          alt="Chatchawan"
-          className="w-24 h-24 rounded-full object-cover border-2 border-black"
-        />
+    <section className="flex flex-col flex-grow w-full h-full px-8 py-8 max-w-6xl text-left overflow-y-auto">
+      <img
+        src={profilePic}
+        alt="Chatchawan"
+        className="w-60 h-60 object-cover border-4 border-black"
+      />
+
+      <div className="mt-8 flex items-center gap-6">
         <div>
           <h2 className="text-xl text-black">About Me</h2>
           <p className="text-md text-black/80 leading-relaxed">
@@ -46,8 +47,8 @@ const Chatchawan = () => {
         </div>
       </div>
 
-    <div>
-        <h3 className="text-lg text-black font-semibold mt-4 mb-2">Programing Language:</h3>
+      <div>
+        <h3 className="text-lg text-black font-semibold mt-4 mb-2">Programming Languages:</h3>
         <div className="flex flex-wrap gap-4">
           {languages.map((Lang) => (
             <div key={Lang.name} className="flex flex-col items-center w-16">
@@ -70,7 +71,8 @@ const Chatchawan = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
 
 export default Chatchawan
