@@ -56,7 +56,7 @@ const Chatchawan = () => {
         <div className="flex flex-wrap gap-4">
           {contacts.map((contacts) => (
           <div key={contacts.name} className="flex flex-col items-center w-16">
-            <a to={contacts.link} target="_blank" rel="noopener noreferrer">
+            <a href={contacts.link} target="_blank" rel="noopener noreferrer">
             <img
               src={contacts.icon}
               alt={contacts.name}
