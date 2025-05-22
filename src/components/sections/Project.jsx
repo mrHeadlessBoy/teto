@@ -37,14 +37,14 @@ const Project = () => {
             key={index}
             className="border border-black/30 mt-14 p-4 rounded bg-black/5 backdrop-blur-md hover:bg-black/10 transition"
           >
-            <h3 className="text-lg text-red-600 mb-4">{project.name}</h3>
+            <h3 className="text-lg text-red-600 font-semibold mb-4">{project.name}</h3>
             <p className="text-sm text-black/80 mt-2">{project.description}</p>
             <p className='text-md text-black/80 mt-2'>tools: {project.tools}</p>
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white bg-black/60 p-2 w-40 mt-2 hover:bg-red-600 hover:text-white  block"
+              className="text-white bg-black/60 p-2 w-40 mt-2 hover:bg-red-600 hover:text-white font-semibold block"
               >{'> '}INSPECT</a>
           </div>
         ))}

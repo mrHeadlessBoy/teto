@@ -14,7 +14,7 @@ const HomeContent = () => {
     -Chatchawan, aka.mrHeadless
   </p>
   <Link to="/chatchawan" className="p-2 bg-black/70 item-center w-40 text-lg text-white hover:bg-red-600 hover:p-2 hover:text-white transition duration-300">
-    <span className="text-xl">{'>'} FIND ME</span>
+    <span className="text-xl font-semibold">{'>'} FIND ME</span>
   </Link>
 </section>
 

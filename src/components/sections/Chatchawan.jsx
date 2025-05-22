@@ -44,7 +44,7 @@ const Chatchawan = () => {
           className="w-60 h-60 grayscale object-cover border-4 border-black"
         />
         <div className="text-left">
-          <h2 className="text-xl text-black/80">About Me</h2>
+          <h2 className="text-xl text-black/80 font-semibold">About Me</h2>
           <p className="text-md text-black/80 leading-relaxed max-w-xl">
             I’m Chatchawan — the Da Vinci of this era — a programmer, web/app/game developer, UX/UI designer, and artist from Thailand.
             I'm most motivated by crafting software, gaming, animation, and bringing ideas to life with my own hands,which is my main task.
