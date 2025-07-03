@@ -26,6 +26,12 @@ const Project = () => {
       tools: "react native, expo, nodejs, express, mongodb",
       link: null,
     },
+    {
+      name: "Bun Todos List",
+      description: "A simple todo list application.",
+      tools: "Bun, React, TailwindCSS, CSS, elysia",
+      link: "https://bunweb-nfu9-jade.vercel.app/",
+    },
     // Add more projects as needed
   ];
 
