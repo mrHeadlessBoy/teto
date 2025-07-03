@@ -32,6 +32,13 @@ const Project = () => {
       tools: "Bun, React, TailwindCSS, CSS, elysia",
       link: "https://bunweb-nfu9-jade.vercel.app/",
     },
+    {
+      name: "school social media",
+      description: "A social media application for schools.",
+      tools: "react native, node, express, mongodb",
+      link: "https://drive.google.com/file/d/1_4Gxy-fxaWXV_8ZscAOIUMOhTjHDcv2h/view?usp=drive_link",
+    },
+    
     // Add more projects as needed
   ];
 
